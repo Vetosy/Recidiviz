@@ -1,0 +1,134 @@
+.press {
+  padding: 88px 0;
+  background-color: var(--light-color);
+
+  &__top {
+    margin-bottom: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 38px;
+    letter-spacing: 1.2px;
+    color: var(--deep-teal);
+  }
+
+  &__link {
+    color: #00413e;
+    border: 1px solid rgba(53, 83, 98, 0.2);
+  }
+
+  &__list {
+    row-gap: var(--offset);
+  }
+
+  &__item {
+    grid-column: 4 span;
+  }
+}
+
+.press-card {
+  position: relative;
+  border-top: 1px solid rgba(53, 83, 98, 0.3);
+  padding-top: 16px;
+  min-height: 145px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 11px;
+  }
+
+  &__author {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin: -18px 0;
+    padding: 18px 0;
+    padding-left: 32px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    background-position: left top 15px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+
+    &--ted {
+      background-image: url(../img/approach-icon-1.png);
+    }
+
+    &--nyt {
+      background-image: url(../img/approach-icon-2.png);
+    }
+
+    &--corr {
+      background-image: url(../img/press-1.png);
+    }
+
+    &--justice {
+      background-image: url(../img/press-2.png);
+    }
+
+    &--corr1 {
+      background-image: url(../img/press-3.png);
+    }
+
+    &--crime {
+      background-image: url(../img/press-4.png);
+    }
+  }
+
+  &__date {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-color);
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 25px;
+    color: #00413e;
+  }
+
+  &__link {
+    color: inherit;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      color: var(--accent-color);
+    }
+
+    &:active {
+      color: var(--active-color);
+    }
+  }
+}
+
+.press-card__link.focus-visible {
+  &::after {
+    outline: 1px solid var(--active-color);
+  }
+}
