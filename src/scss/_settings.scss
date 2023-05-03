@@ -115,3 +115,11 @@ a {
   grid-template-columns: repeat(12, 1fr);
   column-gap: var(--offset);
 }
+
+.graphics {
+  background-color: #f4f5f5;
+
+  &__img {
+    width: 100%;
+  }
+}
