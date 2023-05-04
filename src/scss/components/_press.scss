@@ -7,6 +7,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include small-tablet {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
   }
 
   &__title {
@@ -30,6 +35,10 @@
 
   &__item {
     grid-column: 4 span;
+  }
+
+  @include small-tablet {
+    padding: 60px 0;
   }
 }
 

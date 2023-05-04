@@ -6,10 +6,18 @@
 
   &__content {
     grid-column: 4 span;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__map {
     grid-column: 7 / 5 span;
+
+    @include small-tablet {
+      grid-column: 4 span;
+    }
   }
 
   &__title {
@@ -36,5 +44,9 @@
     border: none;
     font-size: 14px;
     background-color: #00665f;
+  }
+
+  @include small-tablet {
+    padding: 60px 0;
   }
 }
