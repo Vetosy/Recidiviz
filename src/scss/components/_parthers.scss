@@ -4,6 +4,21 @@
   &__container {
     align-items: center;
     gap: 6px;
+
+    @include big-desktop {
+      justify-content: space-between;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__logo {
+    @include big-desktop {
+      max-width: 130px;
+    }
   }
 
   &__title {
@@ -42,6 +57,15 @@
     display: flex;
     align-items: center;
     gap: 12px;
+
+    @include big-desktop {
+      justify-content: space-between;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
 
   &__link {

@@ -114,6 +114,10 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: var(--offset);
+
+  @include small-tablet {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .graphics {
@@ -121,5 +125,17 @@ a {
 
   &__img {
     width: 100%;
+  }
+}
+
+.burger {
+  @include burger;
+
+  display: none;
+  --burger-height: 20px;
+  color: var(--light-color);
+
+  @include small-tablet {
+    display: block;
   }
 }

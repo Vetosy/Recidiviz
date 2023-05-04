@@ -13,6 +13,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &::after {
@@ -24,6 +28,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__content {
@@ -36,6 +44,14 @@
     border-right: 1px solid var(--deep-teal);
     padding: 0 82px;
     height: 100%;
+
+    @include tablet {
+      padding: var(--offset);
+    }
+
+    @include small-tablet {
+      padding: 60px 15px;
+    }
   }
 
   &__text {
@@ -57,5 +73,9 @@
     font-size: 15px;
     line-height: 24px;
     color: var(--light-color);
+  }
+
+  @include tablet {
+    height: auto;
   }
 }
